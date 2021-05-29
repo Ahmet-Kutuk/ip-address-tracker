@@ -1,5 +1,6 @@
 .Header{
     height: 300px;
+    position: relative;
     background:url("../../images/pattern-bg.png") center/cover no-repeat;
     display:flex;
     flex-direction: column;
@@ -46,4 +47,76 @@
           }
 
     }
+}
+
+.Userinfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff;
+    border-radius: 10px;
+    padding:30px 100px;
+    position: absolute;
+    top:160px;
+    text-align: center;
+    
+    h5{
+        color:$darkGray;
+        
+    }
+    p{
+        color:$veryDarkGray;
+        font-weight: 700;
+        font-size:1.1em;
+        margin-top:15px;
+    }
+    @include mq("tablet") {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding:60px 160px;
+        top: 220px;
+      }
+    &-ip{
+        
+        @include mq("tablet") {
+            padding-top:7px;
+            border-right: 1px solid $darkGray;
+            padding-right: 50px;
+          }
+    }
+    &-location{
+      
+        margin-top:15px;
+
+       @include mq("tablet") {
+        margin-left:50px;
+       padding-right: 50px;
+       border-right: 1px solid $darkGray;
+      }
+       
+    }
+    &-timezone{
+        
+        margin-top:15px;
+
+         @include mq("tablet") {
+            margin-left:50px;
+            padding-left: 20px;
+            padding-right: 50px;
+             border-right: 1px solid $darkGray;
+          }
+     }
+     &-ısp{
+       
+        margin-top:15px;
+
+
+        @include mq("tablet") {
+            margin-left:50px;
+            padding-left: 20px;
+          }
+     }
 }
