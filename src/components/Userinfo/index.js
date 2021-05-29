@@ -17,7 +17,7 @@ function Userinfo({info}) {
             </div>
             <div className="Userinfo-ısp">
                 <h5>ISP</h5>
-                <p>{info.isp}</p>
+                <p>{info.org ? info.org : "No isp info"}</p>
             </div>
         </div>
     )

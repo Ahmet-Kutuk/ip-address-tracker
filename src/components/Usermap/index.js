@@ -6,24 +6,28 @@ import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import {getIp} from '../Api';
 
-function Usermap() {
+function Usermap({value}) {
   const [map,setMap] = useState([0,0,0]);
+  const [key,setKey] = useState();
 
   useEffect(() => {
-    const data = getIp();
+    const data = getIp(value);
   data.then(result => {
     setMap([result.lat,result.lon]);
   })
-  },[])
+  },[value])
   
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow
 });
+useEffect(() => {
+  setKey(Math.random()*100);
+}, [map])
 
 L.Marker.prototype.options.icon = DefaultIcon;
     return map.length<3 ?(
-        <MapContainer style={{height:"700px",zIndex:"-1"}} center={map} zoom={13} scrollWheelZoom={false}>
+        <MapContainer key={key} style={{height:"700px",zIndex:"-1"}} center={map} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
