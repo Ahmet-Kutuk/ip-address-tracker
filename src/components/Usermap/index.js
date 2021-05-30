@@ -28,7 +28,7 @@ useEffect(() => {
 
 L.Marker.prototype.options.icon = DefaultIcon;
     return map.length<3 ?(
-        <MapContainer key={key} style={{height:"700px",zIndex:"-1"}} center={map} zoom={13} scrollWheelZoom={false}>
+        <MapContainer key={key} style={{height:"700px",zIndex:"0"}} center={map} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -57,9 +57,11 @@
     background-color:#fff;
     border-radius: 10px;
     padding:30px 100px;
+    max-width: 80%;
     position: absolute;
-    top:160px;
+    top:155px;
     text-align: center;
+    z-index: 5;
     
     h5{
         color:$darkGray;
@@ -72,16 +74,29 @@
         margin-top:15px;
     }
     @include mq("tablet") {
+        max-width: 90%;
+        z-index: 5;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:50px 90px;
+        top: 150px;
+        
+      }
+      @include mq("large") {
+        z-index: 5;
         display:flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding:60px 160px;
         top: 220px;
+        
       }
     &-ip{
         
-        @include mq("tablet") {
+        @include mq("large") {
             padding-top:7px;
             border-right: 1px solid $darkGray;
             padding-right: 50px;
@@ -91,7 +106,7 @@
       
         margin-top:15px;
 
-       @include mq("tablet") {
+       @include mq("large") {
         margin-left:50px;
        padding-right: 50px;
        border-right: 1px solid $darkGray;
@@ -102,7 +117,7 @@
         
         margin-top:15px;
 
-         @include mq("tablet") {
+         @include mq("large") {
             margin-left:50px;
             padding-left: 20px;
             padding-right: 50px;
@@ -114,7 +129,7 @@
         margin-top:15px;
 
 
-        @include mq("tablet") {
+        @include mq("large") {
             margin-left:50px;
             padding-left: 20px;
           }
