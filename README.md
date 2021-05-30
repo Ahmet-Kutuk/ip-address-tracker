@@ -1,6 +1,6 @@
 # Ip address tracker
 
-![screen](https://klasresim.com/i/wUm8Ka)
+![Ekrangörüntüsü](https://cdn.discordapp.com/attachments/341583683162996748/848352938828234752/Screenshot_2021-05-30_Ip_adress_tracker.png)
 
 The application allows you to see your own IP information and position. You can also find information and location by searching for an IP address.
 
