@@ -1,14 +1,14 @@
 # Ip address tracker
 
-![screen](https://imgur.com/Zt9Ln15)
+![screen](https://klasresim.com/i/wUm8Ka)
 
 The application allows you to see your own IP information and position. You can also find information and location by searching for an IP address.
 
 ## Tools
- -Hook
- -React-leaflet
- -leaflet
- -[Api](https://ip-api.com)
+ *Hook
+ *React-leaflet
+ *leaflet
+ *[Api](https://ip-api.com)
   
 ## How to Run a Project
 
