@@ -9,15 +9,15 @@ function Userinfo({info}) {
             </div>
             <div className="Userinfo-location">
                 <h5>LOCATION</h5>
-                <p>{info.region_name}</p>
+                <p>{info.region}</p>
             </div>
             <div className="Userinfo-timezone">
                 <h5>TIMEZONE</h5>
-                <p>{info.time_zone}</p>
+                <p>{info.timezone}</p>
             </div>
             <div className="Userinfo-ısp">
                 <h5>ISP</h5>
-                <p>{info.asn_org ? info.asn_org : "No isp info"}</p>
+                <p>{info.org ? info.org : "No isp info"}</p>
             </div>
         </div>
     )
