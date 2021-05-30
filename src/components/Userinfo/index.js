@@ -5,19 +5,19 @@ function Userinfo({info}) {
         <div className="Userinfo">
             <div className="Userinfo-ip">
                 <h5>IP ADDRESS</h5>
-                <p>{info.query}</p>
+                <p>{info.ip}</p>
             </div>
             <div className="Userinfo-location">
                 <h5>LOCATION</h5>
-                <p>{info.city}</p>
+                <p>{info.region_name}</p>
             </div>
             <div className="Userinfo-timezone">
                 <h5>TIMEZONE</h5>
-                <p>{info.timezone}</p>
+                <p>{info.time_zone}</p>
             </div>
             <div className="Userinfo-ısp">
                 <h5>ISP</h5>
-                <p>{info.org ? info.org : "No isp info"}</p>
+                <p>{info.asn_org ? info.asn_org : "No isp info"}</p>
             </div>
         </div>
     )

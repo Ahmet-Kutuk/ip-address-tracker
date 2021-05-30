@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import icon from 'leaflet/dist/images/marker-icon.png';
+import icon from '../../images/icon-location.svg';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import {getIp} from '../Api';
 
@@ -13,7 +13,7 @@ function Usermap({value}) {
   useEffect(() => {
     const data = getIp(value);
   data.then(result => {
-    setMap([result.lat,result.lon]);
+    setMap([result.latitude,result.longitude]);
   })
   },[value])
   
@@ -24,6 +24,7 @@ let DefaultIcon = L.icon({
 useEffect(() => {
   setKey(Math.random()*100);
 }, [map])
+
 
 L.Marker.prototype.options.icon = DefaultIcon;
     return map.length<3 ?(

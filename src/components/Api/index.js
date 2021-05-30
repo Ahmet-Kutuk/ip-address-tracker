@@ -1,5 +1,5 @@
 export const getIp = async (value="") => {
-    return fetch(`http://ip-api.com/json/${value}`)
+    return fetch(`https://ifconfig.co/json?ip=${value}`)
         .then(res => res.json())
         .then(data => data)
         .catch(error => error)
