@@ -6,6 +6,8 @@ Demo: [Live](https://ip-address-tracker-azure.vercel.app/)
  
 The application allows you to see your own IP information and position. You can also find information and location by searching for an IP address.
 
+** If you have adblock please disable it for the demo to work. this way the api will work.
+
 ## Tools
  * Hook
  * React-leaflet
