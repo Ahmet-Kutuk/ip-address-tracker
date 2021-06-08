@@ -1,137 +1,125 @@
-.Header{
-    height: 300px;
-    position: relative;
-    background:url("../../images/pattern-bg.png") center/cover no-repeat;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top:1em;
+.Header {
+  height: 300px;
+  position: relative;
+  background: url("../../images/pattern-bg.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
 
-    &-title{
-        color:white
-    }
+  &-title {
+    color: white;
+  }
 }
 
-.Input{
+.Input {
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
 
-    font-weight: 400;
+  &-text {
+    width: 300px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 20px;
+
+    @include mq("tablet") {
+      width: 600px;
+      height: 50px;
+    }
+  }
+
+  &-button {
+    background-color: #000;
+    color: white;
+    width: 50px;
+    height: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include mq("tablet") {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.Userinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 100px;
+  max-width: 80%;
+  position: absolute;
+  top: 155px;
+  text-align: center;
+  z-index: 5;
+
+  h5 {
+    color: $darkGray;
+  }
+  p {
+    color: $veryDarkGray;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-top: 15px;
+  }
+  @include mq("tablet") {
+    max-width: 90%;
+    z-index: 5;
     display: flex;
-    flex-direction: row;
-    margin-top:1em;
-
-    &-text{
-        width: 300px;
-        height:60px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        padding-left:20px;
-        
-        @include mq("tablet") {
-            width: 600px;
-            height:50px;
-          }
-        
-    }
-
-    &-button{
-        background-color: #000;
-        color:white;
-        width: 50px;
-        height: 60px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        @include mq("tablet") {
-            width: 50px;
-            height:50px;
-          }
-
-    }
-}
-
-.Userinfo{
-    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#fff;
-    border-radius: 10px;
-    padding:30px 100px;
-    max-width: 80%;
-    position: absolute;
-    top:155px;
-    text-align: center;
+    padding: 50px 90px;
+    top: 150px;
+  }
+  @include mq("large") {
     z-index: 5;
-    
-    h5{
-        color:$darkGray;
-        
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 160px;
+    top: 220px;
+  }
+  &-ip {
+    @include mq("large") {
+      padding-top: 7px;
+      border-right: 1px solid $darkGray;
+      padding-right: 50px;
     }
-    p{
-        color:$veryDarkGray;
-        font-weight: 700;
-        font-size:1.1em;
-        margin-top:15px;
+  }
+  &-location {
+    margin-top: 15px;
+
+    @include mq("large") {
+      margin-left: 50px;
+      padding-right: 50px;
+      border-right: 1px solid $darkGray;
     }
-    @include mq("tablet") {
-        max-width: 90%;
-        z-index: 5;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding:50px 90px;
-        top: 150px;
-        
-      }
-      @include mq("large") {
-        z-index: 5;
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding:60px 160px;
-        top: 220px;
-        
-      }
-    &-ip{
-        
-        @include mq("large") {
-            padding-top:7px;
-            border-right: 1px solid $darkGray;
-            padding-right: 50px;
-          }
+  }
+  &-timezone {
+    margin-top: 15px;
+
+    @include mq("large") {
+      margin-left: 50px;
+      padding-left: 20px;
+      padding-right: 50px;
+      border-right: 1px solid $darkGray;
     }
-    &-location{
-      
-        margin-top:15px;
+  }
+  &-ısp {
+    margin-top: 15px;
 
-       @include mq("large") {
-        margin-left:50px;
-       padding-right: 50px;
-       border-right: 1px solid $darkGray;
-      }
-       
+    @include mq("large") {
+      margin-left: 50px;
+      padding-left: 20px;
     }
-    &-timezone{
-        
-        margin-top:15px;
-
-         @include mq("large") {
-            margin-left:50px;
-            padding-left: 20px;
-            padding-right: 50px;
-             border-right: 1px solid $darkGray;
-          }
-     }
-     &-ısp{
-       
-        margin-top:15px;
-
-
-        @include mq("large") {
-            margin-left:50px;
-            padding-left: 20px;
-          }
-     }
+  }
 }
